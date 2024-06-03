@@ -27,6 +27,10 @@ static int power(int i)
     return n;
 }
 
+/*
+Write a given number to the standard output
+@param nbr number
+*/
 int my_put_nbr(int nbr)
 {
     int i = 0;

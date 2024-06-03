@@ -7,6 +7,10 @@
 
 #include "my.h"
 
+/*
+Returns 1 if the given number is negative and 0 if not
+@param n number
+*/
 int my_isneg(int n)
 {
     return (n < 0);

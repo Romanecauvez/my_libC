@@ -27,11 +27,16 @@ static int power(int i)
     return n;
 }
 
+/*
+Write a given number to the given file descriptor
+@param fd file descriptor
+@param nbr number
+*/
 int my_dput_nbr(int fd, int nbr)
 {
     int i = 0;
     int n = 0;
-    float f = (float)nbr;
+    float f = (float) nbr;
     int len = 0;
 
     if (my_isneg(nbr)) {
