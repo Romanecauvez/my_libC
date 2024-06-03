@@ -1,0 +1,9 @@
+.vscode
+.idea
+*.o
+*.so
+*.a
+*.sa
+*.txt
+main.c
+my_libC
