@@ -33,7 +33,6 @@ Write a given number to the standard output
 */
 int my_put_nbr(int nbr)
 {
-    int i = 0;
     int n = 0;
     float f = (float)nbr;
     int len = 0;
@@ -42,9 +41,13 @@ int my_put_nbr(int nbr)
         my_putchar('-');
         nbr *= -1;
     }
+    if (nbr == 0) {
+        my_putchar('0');
+        return 1;
+    }
     len = nbr_len(nbr);
     f = f / power(len);
-    for (; i < len; i++) {
+    for (; len; len--) {
         n = (int)(f * 10);
         f = f * 10 - n;
         my_putchar(n + 48);
