@@ -14,13 +14,15 @@ SRC	=	my_putchar.c	\
 		day_03/my_print_revalpha.c	\
 		day_03/my_print_digits.c	\
 		day_03/my_print_comb.c	\
+		day_03/my_print_comb2.c	\
 		my_put_nbr.c	\
 		my_dput_nbr.c	\
+		day_04/my_swap.c	\
+		day_04/my_strlen.c	\
 		# my_strcat.c		\
 		# my_strdup.c		\
 		# my_strcpy.c		\
 		# my_strncpy.c	\
-		# my_strlen.c		\
 		# my_arraylen.c	\
 		# my_getnbr.c		\
 		# my_strcmp.c		\

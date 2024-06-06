@@ -20,3 +20,6 @@ int my_isneg(int n);
 int my_put_nbr(int nbr);
 int my_dput_nbr(int fd, int nbr);
 int my_print_comb(void);
+int my_print_comb2(void);
+void my_swap(int *a, int *b);
+int my_strlen(char *str);
