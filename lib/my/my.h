@@ -19,3 +19,4 @@ int my_print_digits(void);
 int my_isneg(int n);
 int my_put_nbr(int nbr);
 int my_dput_nbr(int fd, int nbr);
+int my_print_comb(void);
