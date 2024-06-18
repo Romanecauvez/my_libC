@@ -11,7 +11,7 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	my_libC
 
-CFLAGS	=	-W -Wall -Wextra -Wpedantic -I./include -L./lib/my -lmy -lm
+CFLAGS	=	-W -Wall -Wextra -Wpedantic -I./include -L./lib/my -lmy -lm -g
 
 all:	$(NAME)
 
