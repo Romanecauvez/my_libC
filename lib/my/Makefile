@@ -19,12 +19,15 @@ SRC	=	my_putchar.c	\
 		my_dput_nbr.c	\
 		day_04/my_swap.c	\
 		day_04/my_strlen.c	\
+		day_04/my_evil_str.c	\
+		my_swapchar.c	\
+		my_strrev.c		\
+		day_04/my_getnbr.c		\
 		# my_strcat.c		\
 		# my_strdup.c		\
 		# my_strcpy.c		\
 		# my_strncpy.c	\
 		# my_arraylen.c	\
-		# my_getnbr.c		\
 		# my_strcmp.c		\
 		# my_strncmp.c	\
 		# my_strclean.c	\

@@ -23,3 +23,7 @@ int my_print_comb(void);
 int my_print_comb2(void);
 void my_swap(int *a, int *b);
 int my_strlen(char *str);
+char *my_evil_str(char *str);
+void my_swap_char(char *a, char *b);
+char *my_strrev(char *str);
+int my_getnbr(char const *str);

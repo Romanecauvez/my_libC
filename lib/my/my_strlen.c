@@ -5,6 +5,10 @@
 ** my_strlen
 */
 
+/*
+Returns the length of the given string
+@param str string
+*/
 int my_strlen(char *str)
 {
     int i = 0;
