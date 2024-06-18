@@ -9,3 +9,5 @@ main.c
 my_libC
 lib/my/day_03/
 lib/my/day_04/
+*.out
+vgcore*
