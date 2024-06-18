@@ -10,7 +10,7 @@ the libC is a standard library of the C language, she contains most of functions
 - [x] [my_put_nbr](#4)
 - [x] [my_dput_nbr](#5)
 - [x] [my_isneg](#6)
-- [ ] [my_strlen](#8)
+- [x] [my_strlen](#8)
 - [ ] [my_strcat](#9)
 - [ ] [my_strdup](#10)
 - [ ] [my_strcpy](#11)
@@ -23,7 +23,6 @@ the libC is a standard library of the C language, she contains most of functions
 - [ ] [my_str_to_word_array](#19)
 - [ ] [my_strlowcase](#7)
 - [ ] [my_strhighcase](#20)
-- [ ] [dfghjk](#13)
 
 ---
 - [x] function(s) implemented 
@@ -202,16 +201,6 @@ Translate a string intirely in lowcase.
 char *my_strhighcase(char *str);
 ```
 Translate a string intirely in highcase.
-<!-- 
-### dfghjk {#13}
-
-```C
-dfghjk
-```
-dfghjk
-
-Il manque le 13 !!!!!
--->
 
 <!-- 
 objects : 
