@@ -5,8 +5,6 @@
 ** my_putchar
 */
 
-#include "my.h"
-
 /*
 Write a given character to the standard output
 @param c char to write

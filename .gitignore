@@ -10,5 +10,10 @@ my_libC
 lib/my/day_03/
 lib/my/day_04/
 lib/my/day_05/
+lib/my/day_06/
+lib/my/day_07/
+lib/my/day_08/
+lib/my/day_09/
+lib/my/day_10/
 *.out
 vgcore*

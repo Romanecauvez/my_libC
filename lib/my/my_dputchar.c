@@ -5,8 +5,6 @@
 ** my_dputchar
 */
 
-#include "my.h"
-
 /*
 Write a given character to the given file descriptor
 @param fd file descriptor

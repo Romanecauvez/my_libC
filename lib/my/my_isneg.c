@@ -5,8 +5,6 @@
 ** my_isneg
 */
 
-#include "my.h"
-
 /*
 Returns 1 if the given number is negative and 0 if not
 @param n number

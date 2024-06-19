@@ -20,3 +20,5 @@ int my_strlen(char *str);
 void my_swap_char(char *a, char *b);
 char *my_strrev(char *str);
 int my_getnbr(char const *str);
+char *my_strcpy(char *dest, char const *src);
+char *my_strncpy(char *dest, char const *src, int n);
