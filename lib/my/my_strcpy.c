@@ -5,8 +5,6 @@
 ** my_strcpy
 */
 
-#include "my.h"
-
 /*
 Copies a string into another
 @param dest string
@@ -14,7 +12,11 @@ Copies a string into another
 */
 char *my_strcpy(char *dest, char const *src)
 {
-    for (int j = 0; src[j]; j++)
+    int j = 0;
+
+    for (; src[j] != '\0'; j++) {
         dest[j] = src[j];
+    }
+    dest[j] = '\0';
     return dest;
 }

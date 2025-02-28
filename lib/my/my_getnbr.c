@@ -22,29 +22,19 @@ static char *cut_end_of_str(char *str)
 {
     int i = 0;
 
-    for (; str[i] && str[i] > 48 && str[i] < 57; i++);
+    for (; str[i] && str[i] > 48 && str[i] < 58; i++);
+    if (!str[i])
+        return str;
     str[i] = '\0';
     return str;
 }
 
-static char *get_start_str(char const *str)
+static int get_start_str(char *str)
 {
     int i = 0;
 
-    for (; str[i] && str[i] < 48 || str[i] > 57; i++);
-    return &str[i];
-}
-
-static int count_minus(char const *str)
-{
-    int i = 0;
-    int minus = 0;
-
-    for (; str[i] && str[i] < 48 || str[i] > 57; i++) {
-        if (str[i] == '-')
-            minus++;
-    }
-    return minus;
+    for (; str[i] && (str[i] < 48 || str[i] > 58); i++);
+    return i;
 }
 
 /*
@@ -53,17 +43,21 @@ Returns an int being the conversion of a string given in parameters
 */
 int my_getnbr(char const *str)
 {
-    int minus = 1;
     int nbr = 0;
     char *str_nbr = NULL;
+    char *tmp = my_strdup(str);
+    int begin = 0;
 
-    if (!str)
+    if (!str || !tmp)
+        return -1;
+    begin = get_start_str(tmp);
+    if (begin >= my_strlen(tmp)) {
+        free(tmp);
         return 0;
-    if (count_minus(str) % 2 == 1)
-        minus = -1;
-    str_nbr = get_start_str(str);
+    }
+    str_nbr = &tmp[begin];
     str_nbr = cut_end_of_str(str_nbr);
     nbr = translate_into_int(str_nbr);
-    nbr *= minus;
+    free(tmp);
     return nbr;
 }

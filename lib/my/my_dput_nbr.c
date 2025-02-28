@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-static int nbr_len(int nbr)
+int nbr_len(int nbr)
 {
     int i = 0;
 
@@ -15,16 +15,6 @@ static int nbr_len(int nbr)
         nbr /= 10;
     }
     return i;
-}
-
-static int power(int i)
-{
-    int n = 10;
-
-    for (; i - 1 > 0; i--) {
-        n *= 10;
-    }
-    return n;
 }
 
 /*
@@ -54,4 +44,10 @@ int my_dput_nbr(int fd, int nbr)
         my_dputchar(fd, n + 48);
     }
     return len;
+}
+
+int my_dput_nbr_p(int fd, va_list *ap, int p)
+{
+    (void)p;
+    return my_dput_nbr(fd, va_arg(*ap, int));
 }

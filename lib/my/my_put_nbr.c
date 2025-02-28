@@ -4,27 +4,24 @@
 ** File description:
 ** my_put_nbr
 */
+/*
+** EPITECH PROJECT, 2024
+** my_libC
+** File description:
+** my_put_nbr
+*/
 
 #include "my.h"
 
-static int nbr_len(int nbr)
+static int verification(int nbr)
 {
-    int i = 0;
-
-    for (; nbr > 0; i++) {
-        nbr /= 10;
+    if (nbr < INT_MIN || nbr > INT_MAX)
+        return 0;
+    if (nbr == 0) {
+        my_putchar('0');
+        return 0;
     }
-    return i;
-}
-
-static int power(int i)
-{
-    int n = 10;
-
-    for (; i - 1 > 0; i--) {
-        n *= 10;
-    }
-    return n;
+    return 1;
 }
 
 /*
@@ -33,24 +30,29 @@ Write a given number to the standard output
 */
 int my_put_nbr(int nbr)
 {
-    int n = 0;
-    float f = (float)nbr;
+    int tmp = 0;
     int len = 0;
+    int tmp2 = 0;
 
+    if (verification(nbr) == 0)
+        return 0;
     if (my_isneg(nbr)) {
         my_putchar('-');
         nbr *= -1;
     }
-    if (nbr == 0) {
-        my_putchar('0');
-        return 1;
-    }
+    tmp2 = nbr % 10;
     len = nbr_len(nbr);
-    f = f / power(len);
-    for (; len; len--) {
-        n = (int)(f * 10);
-        f = f * 10 - n;
-        my_putchar(n + 48);
+    for (; len > 1; len--) {
+        tmp = nbr / power(len - 1);
+        nbr %= power(len - 1);
+        my_putchar(tmp + 48);
     }
-    return len;
+    my_putchar(tmp2 + 48);
+    return 0;
+}
+
+int my_put_nbr_p(va_list *ap, int p)
+{
+    (void)p;
+    return my_put_nbr(va_arg(*ap, int));
 }

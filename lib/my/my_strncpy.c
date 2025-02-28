@@ -5,8 +5,6 @@
 ** my_strncpy
 */
 
-#include "my.h"
-
 /*
 Copies a string n times into another
 @param dest string

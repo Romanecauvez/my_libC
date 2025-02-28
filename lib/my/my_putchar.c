@@ -1,15 +1,24 @@
 /*
 ** EPITECH PROJECT, 2024
-** my_libC
+** delivery_2.0
 ** File description:
 ** my_putchar
 */
 
+#include "my.h"
+
 /*
-Write a given character to the standard output
-@param c char to write
+Prints a char
+@param c character
 */
 void my_putchar(char c)
 {
     write(1, &c, 1);
+}
+
+int my_putchar_p(va_list *ap, int p)
+{
+    (void)p;
+    my_putchar(va_arg(*ap, int));
+    return 0;
 }

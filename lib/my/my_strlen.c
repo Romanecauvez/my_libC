@@ -6,15 +6,16 @@
 */
 
 /*
-Returns the length of the given string
+Returns the length of the given string, -1 on NULL pointer
 @param str string
 */
 int my_strlen(char *str)
 {
     int i = 0;
 
-    while (str[i]) {
+    if (!str)
+        return -1;
+    while (str[i])
         i++;
-    }
     return i;
 }
